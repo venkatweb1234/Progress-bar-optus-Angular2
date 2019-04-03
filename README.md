@@ -1,6 +1,6 @@
 Venkateswarlu.Sattenapalli
 
-git clone
+git clone https://github.com/venkatweb1234/Progress-bar-optus-Angular2.git
 
 
 yarn install 
