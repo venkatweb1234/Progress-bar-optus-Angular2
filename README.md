@@ -1,7 +1,17 @@
 Venkateswarlu.Sattenapalli
 
+git clone
+
+
+yarn install 
+
+npm install
+
+and 
+
 yarn start
 
+npm start
 
 # MyApp
 
