@@ -1,0 +1,18 @@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<div class="col-xs-2 col-center-block">
+    <h1>Progress Bars</h1>
+    <div *ngFor="let bar of Result.bars; let index=index" class="myProgress" id="myProgress_{{index}}"><div class="progress-bar progress-bar-success progress-bar-striped active"  role="progressbar" [style.width]="(Result.bars[index]+width)+'%'" id="bar_{{index}}"><div class="label" id="label_{{index}}">{{Result.bars[index]+width}}%</div></div></div>
+    <br />
+    <select  (change)="addchangeprogressbar($event.target)" class="selectpicker">
+      <option *ngFor="let bar of Result.bars; let index=index"   [value]="index">#Progress{{index+1}}</option>
+    </select>
+ 
+    <span><input type="button" *ngFor="let button of Result.buttons; let index=index" class="btn btn-default p-button"  value={{Result.buttons[index]}} (click)="addincrementValues($event)" /></span>
+</div>
+  
