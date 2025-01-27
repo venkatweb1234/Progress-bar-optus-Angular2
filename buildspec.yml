@@ -1,6 +1,5 @@
 verison: 0.2
 
-
 phases:
     install:
         runtime-versions:
@@ -10,7 +9,6 @@ phases:
     pre_build:
       command:
         - echo: "we are in the pre build phase"
-
     build:
       commands:
         - echo "we are in the build block:
