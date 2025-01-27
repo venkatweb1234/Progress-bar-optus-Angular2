@@ -1,21 +1,19 @@
-verison: 0.2
+version: 0.2
 
-phases:
+phases: 
     install:
         runtime-versions:
             nodejs: latest
-        commands: 
+        commands:
             - echo "installing something"
     pre_build:
-      command:
-        - echo: "we are in the pre build phase"
+        commands: 
+            - echo "we are in the pre build phase"
     build:
-      commands:
-        - echo "we are in the build block:
-        - echo "we will run some tests"
-        - grep -Fq "Congratualations" index.html
-
+        commands:
+            - echo "we are in the build block"
+            - echo "we will run some tests"
+            - grep -Fq "Congratulations" index.html
     post_build:
-      commands:
-      - echo " we are in the post build phase"
-      
+        commands:
+            - echo "we are in the post build phase"
